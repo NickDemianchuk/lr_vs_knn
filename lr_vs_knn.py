@@ -32,7 +32,7 @@ X_dev, X_test, y_dev, y_test = train_test_split(
     X_temp, y_temp, test_size=0.5, random_state=0)
 
 # Training and evaluating LR classifier
-lr = LogisticRegression(C=10.0)
+lr = LogisticRegression()
 lr.fit(X_train, y_train)
 lr_dev_accuracy = accuracy_score(y_dev, lr.predict(X_dev)) * 100
 print('The accuracy of LR evaluated on the development data is %.3f percent' % lr_dev_accuracy)
@@ -44,6 +44,6 @@ print('The accuracy of KNN evaluated on the development data is %.3f percent' % 
 
 lr_test_accuracy = accuracy_score(y_test, lr.predict(X_test)) * 100
 knn_test_accuracy = accuracy_score(y_test, knn.predict(X_test)) * 100
-print('The accuracy of LR evaluated on the test data is %.3f percent' % lr_test_accuracy)
+print('\nThe accuracy of LR evaluated on the test data is %.3f percent' % lr_test_accuracy)
 print('The accuracy of KNN evaluated on the test data is %.3f percent' % knn_test_accuracy)
 print('KNN beats LR by %.3f percent' % (knn_test_accuracy - lr_test_accuracy))
