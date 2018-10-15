@@ -23,7 +23,7 @@ sc = StandardScaler()
 sc.fit(X)
 X_std = sc.transform(X)
 
-# Splitting dataset into 70% train and 30% temporary dataset that needs to be splitted
+# Splitting dataset into 70% train and 30% temporary dataset that needs to be split
 X_train, X_temp, y_train, y_temp = train_test_split(
     X_std, y, test_size=0.3, random_state=0)
 
