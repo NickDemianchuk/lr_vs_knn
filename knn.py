@@ -31,7 +31,7 @@ class KNN(object):
 
         # Creating a list of first k neighbors' class labels
         neighbors = []
-        for i in range(self.k):
+        for i in range(int(self.k)):
             neighbors.append(distances[i][0])
         return np.array(neighbors)
 
