@@ -51,7 +51,7 @@ class CLSTuner(object):
                     color='lightgreen', marker='o', label='k values')
         plt.scatter(knn_params[-1, 0], knn_params[-1, 1],
                     color='g', edgecolors='black', marker='o', label='The best k value')
-        plt.title('')
+        plt.title('KNN tuning')
         plt.xlabel('Number of neighbors')
         plt.ylabel('Accuracy')
         plt.legend()
