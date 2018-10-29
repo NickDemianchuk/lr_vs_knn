@@ -12,7 +12,7 @@ class CLSTuner(object):
 
     def __init__(self):
         self.best_acc = 0
-        self.best_ = None
+        self.best_cls = None
 
     def get_tuned_LR(self, X_train, y_train, X_test, y_test):
         self.best_acc = 0
