@@ -39,9 +39,11 @@ print('\nThe accuracy of the LR (default params) evaluated on the dev set is %.3
 
 # Tuning and evaluating LR on the dev set
 cls_tuner = CLSTuner()
+# lr holds the reference to the best LR classifier
 lr = cls_tuner.get_tuned_LR(X_train, y_train, X_dev, y_dev)
 
 # Tuning and evaluating KNN on the dev set
+# knn holds the reference to the best KNN classifier
 knn = cls_tuner.get_tuned_KNN(X_train, y_test, X_dev, y_dev)
 
 # Evaluating tuned LR and KNN on the test set
