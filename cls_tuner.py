@@ -66,4 +66,3 @@ class CLSTuner(object):
         if self.best_acc < acc:
             self.best_cls = cls
             self.best_acc = acc
-        return self.best_cls
