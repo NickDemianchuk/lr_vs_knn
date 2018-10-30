@@ -44,7 +44,7 @@ lr = cls_tuner.get_tuned_LR(X_train, y_train, X_dev, y_dev)
 
 # Tuning and evaluating KNN on the dev set
 # knn holds the reference to the best KNN classifier
-knn = cls_tuner.get_tuned_KNN(X_train, y_test, X_dev, y_dev)
+knn = cls_tuner.get_tuned_KNN(X_train, y_train, X_dev, y_dev)
 
 # Evaluating tuned LR and KNN on the test set
 lr_test_acc = accuracy_score(y_test, lr.predict(X_test)) * 100
