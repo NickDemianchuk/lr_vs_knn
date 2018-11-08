@@ -51,4 +51,4 @@ lr_test_acc = accuracy_score(y_test, lr.predict(X_test)) * 100
 knn_test_acc = accuracy_score(y_test, knn.predict(X_test)) * 100
 print('\nThe accuracy of the tuned LR on the test set is %.3f percent' % lr_test_acc)
 print('The accuracy of the tuned KNN on the test set is %.3f percent' % knn_test_acc)
-print('LR performs better than KNN by %.3f percent' % (lr_test_acc - knn_test_acc))
+print('KNN performs better than LR by %.3f percent' % (knn_test_acc - lr_test_acc))
